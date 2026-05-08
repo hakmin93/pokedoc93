@@ -3,13 +3,6 @@
 
 https://hakmin93.github.io/pokedoc93/
 
-이미지 업데이트
-### ver 1.2
-
-1. 2세대 포켓몬 추가
-
-2. 다운로드 버튼생성 추가
-삼성 인터넷 브라우저 사용자 및 위 이미지 저장 버튼이 안 먹으면 아래 버튼으로 다운로드 버튼을 직접 생성 하여 저장 가능.
 ### ver 1.1
 <img src="https://pokedoc.github.io/pokedoc/image/pokedoc.png">
 
