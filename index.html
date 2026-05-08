@@ -226,14 +226,14 @@
     var totalCount = 100;
     var cols = 10;
 
-    var cardWidth = 92;
-    var cardHeight = 126;
+    var cardWidth = 91;
+    var cardHeight = 124;
 
-    var startX = 52;
+    var startX = 51;
     var startY = 84;
 
-    var stepX = 102;
-    var stepY = 136;
+    var stepX = 101.5;
+    var stepY = 134.7;
 
     var bgWidth = 1125;
     var bgHeight = 1481;
@@ -250,8 +250,14 @@
       card.style.backgroundImage = 'url("image/1996artwork100/1996artwork100.jpg")';
       card.style.backgroundRepeat = 'no-repeat';
       card.style.backgroundSize = bgWidth + 'px ' + bgHeight + 'px';
-      card.style.backgroundPosition =
-        '-' + (startX + col * stepX) + 'px -' + (startY + row * stepY) + 'px';
+     var xCorrectionByRow = row * 0.2;
+     var yCorrectionByCol = col * 0.05;
+
+     var x = startX + col * stepX + xCorrectionByRow;
+     var y = startY + row * stepY + yCorrectionByCol;
+
+     card.style.backgroundPosition =
+     '-' + x + 'px -' + y + 'px';
 
       var overlay = document.createElement('div');
       card.appendChild(overlay);
