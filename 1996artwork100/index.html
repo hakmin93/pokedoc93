@@ -16,7 +16,7 @@
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1W722HT2CM"></script>
   <script src="https://kit.fontawesome.com/2628447209.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./header.css">
+  <link rel="stylesheet" href="../header.css">
 
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -171,7 +171,7 @@
     </div>
   </header>
 
-  <div class="title">학민's 띠부띠부씰 도감 ver 1.1</div>
+  <div class="title">1996 아트웍 100종</div>
 
   <div class="checkCnt">
     선택: (<span id="cnt">0</span>/100)
@@ -213,7 +213,7 @@
     </div>
   </div>
 
-  <script src="js/html2canvas.min.js"></script>
+  <script src="../js/html2canvas.min.js"></script>
 
   <script>
     /*
@@ -226,14 +226,14 @@
     var totalCount = 100;
     var cols = 10;
 
-    var cardWidth = 92;
-    var cardHeight = 126;
+    var cardWidth = 91;
+    var cardHeight = 124;
 
-    var startX = 52;
+    var startX = 51;
     var startY = 84;
 
-    var stepX = 102;
-    var stepY = 136;
+    var stepX = 101.5;
+    var stepY = 134.7;
 
     var bgWidth = 1125;
     var bgHeight = 1481;
@@ -247,11 +247,17 @@
 
       card.style.width = cardWidth + 'px';
       card.style.height = cardHeight + 'px';
-      card.style.backgroundImage = 'url("image/1996artwork100/1996artwork100.jpg")';
+      card.style.backgroundImage = 'url("../image/1996artwork100/1996artwork100.jpg")';
       card.style.backgroundRepeat = 'no-repeat';
       card.style.backgroundSize = bgWidth + 'px ' + bgHeight + 'px';
-      card.style.backgroundPosition =
-        '-' + (startX + col * stepX) + 'px -' + (startY + row * stepY) + 'px';
+     var xCorrectionByRow = row * 0.2;
+     var yCorrectionByCol = col * 0.05;
+
+     var x = startX + col * stepX + xCorrectionByRow;
+     var y = startY + row * stepY + yCorrectionByCol;
+
+     card.style.backgroundPosition =
+     '-' + x + 'px -' + y + 'px';
 
       var overlay = document.createElement('div');
       card.appendChild(overlay);
@@ -265,7 +271,7 @@
       선택, 선택반전, 숨기기, 숨긴 씰 보기, 배경반전, 이미지저장, 링크복사
     */
 
-    var url = 'https://hakmin93.github.io/pokedoc93/?code=';
+    var url = 'https://hakmin93.github.io/pokedoc93/1996artwork100/?code=';
 
     var digits = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_';
 
