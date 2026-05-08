@@ -1,328 +1,500 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta name="keywords" content="포켓몬,포켓몬빵,띠부씰,도감">
-        <meta name="description" content="포켓몬빵 띠부띠부씰 도감 2세대 추가">
-        <meta data-n-head="ssr" charset="utf-8">
-        <meta data-n-head="ssr" name="robots" content="noindex">
-        <meta data-n-head="ssr" name="format-detection" content="telephone=no">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
-        <meta data-n-head="ssr" data-hid="og:title" property="og:title" content="포켓몬스터 띠부띠부씰 도감 ver 2.3">
-        <meta data-n-head="ssr" data-hid="og:description" property="og:description" content="포켓몬스터 띠부띠부씰 추억을 보관하자 번호순">
-        <meta data-n-head="ssr" data-hid="og:image" property="og:image" content="https://pokedoc.github.io/pokedoc/preview.PNG">
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1W722HT2CM"></script>
-<script src="https://kit.fontawesome.com/2628447209.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="./header.css" />
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<head>
+  <meta name="keywords" content="포켓몬,포켓몬빵,띠부씰,도감">
+  <meta name="description" content="학민's 포켓몬 띠부띠부씰 도감">
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
 
-  gtag('config', 'G-1W722HT2CM');
-</script>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3067887546047208"
-     crossorigin="anonymous"></script>
+  <meta property="og:title" content="학민's 포켓몬 띠부띠부씰 도감 ver 1.1">
+  <meta property="og:description" content="1996 아트웍 100종 도감">
+  <meta property="og:image" content="https://hakmin93.github.io/pokedoc93/preview.PNG">
 
-<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
-        <title>포켓몬스터 띠부띠부씰 도감 ver 1.1</title>
-        <style>
-            .flex {display: flex;}
-            #downloadBtn { margin: 0 10px; }
-            .selected {background-color: rgba(0,0,0,0.7);}
-            body {background-color: black;}
-            body.negative {background-color: white; color: black;}
-            body.negative .title {color: black;}
-            body.negative .textDiv {color: black;}
-            body.negative .menu, body.negative .menu a  {color: black;}
-            body.negative .linkLabel, body.negative .checkCnt {color:black; margin-bottom: 10px;} {color: black;}
-            .btnDiv {margin-top:20px;}
-            .title {text-align:center; font-size:20px; margin-bottom:20px; color:white;}
-            .menu {text-align:right; font-size:20px; margin-bottom:20px; color:white;}
-            .menu a {text-decoration: none; text-align:right; font-size:20px; margin-bottom:20px; color:white;}
-            .linkStr {width:100%; max-width: 300px; margin-top:10px;}
-            .linkLabel, .checkCnt {color:white; margin-bottom: 10px;}
-            .textDiv {color:white; margin-top:20px;}
-            .textDiv ul {list-style: decimal; padding-left:20px; margin-top:5px;}
-            .textDiv ul li span {color:crimson;}
-            #imageDiv { padding-right: 2.5px;} 
-         #imageDiv {
-  padding: 10px;
-  font-size: 0;
-}
+  <title>학민's 포켓몬 띠부띠부씰 도감 ver 1.1</title>
 
-.image {
-  position: relative;
-  display: inline-block;
-  width: 92px;
-  height: 126px;
-  margin: 1px;
-  cursor: pointer;
-  background-repeat: no-repeat;
-  box-sizing: border-box;
-  overflow: hidden;
-  vertical-align: top;
-}
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1W722HT2CM"></script>
+  <script src="https://kit.fontawesome.com/2628447209.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./header.css">
 
-.image > div {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  border: 1px solid black;
-  box-sizing: border-box;
-}
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1W722HT2CM');
+  </script>
 
-.selected {
-  background-color: rgba(0,0,0,0.7);
-}  
-        
-            </style>
-    </head>
-    <body id="body">
-        <header class="PMS_Header_UI">
-            <div class="Header__Users">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-            <div class="Header__Btns UI">
-                <a class="titleBtn"> 학민's 포켓몬 띠부띠부씰 </a>
-                <a class="navBtn" href="https://hakmin93.github.io/pokedoc93/1996artwork100/">1996 아트웍 100종</a>
-                <a class="navBtn" href="https://hakmin93.github.io/pokedoc93/2026new150/">2026 NEW 150종</a>
-                <a class="navBtn" href="https://moadocs.github.io"><i class="fa-solid fa-book"></i>  다른 도감 보러가기</a>
-            </div>
-            <div class="js-clock">
-              <h1></h1>
-            </div>
-          </header>
-        <div class="title">포켓몬스터 띠부띠부씰 도감 ver 1.1</div>
-        <ins class="kakao_ad_area" style="display:none;"
-        data-ad-unit = "DAN-9aSR9NK2SSZf6ru4"
-        data-ad-width = "320"
-        data-ad-height = "50"></ins>
-        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
-                <div class="checkCnt">(<span id="cnt">0</span>/275) 
-                    <input type="button" id="delBtn" value="흑백 씰 숨기기"/>
-                    <input type="button" id="showBtn" value="숨긴 씰 보기"/>
-                    <input type="button" id="ngtBtn" value="배경색 반전"/>
-                </div>
-    <div id="imageDiv"></div>
-
-<script>
-  var imageDiv = document.getElementById('imageDiv');
-
-  var totalCount = 100;
-  var cols = 10;
-
-  var cardWidth = 92;
-  var cardHeight = 126;
-
-  var startX = 52;
-  var startY = 84;
-
-  var stepX = 102;
-  var stepY = 136;
-
-  var bgWidth = 1125;
-  var bgHeight = 1481;
-
-  for (var i = 0; i < totalCount; i++) {
-    var col = i % cols;
-    var row = Math.floor(i / cols);
-
-    var card = document.createElement('div');
-    card.className = 'image';
-
-    card.style.width = cardWidth + 'px';
-    card.style.height = cardHeight + 'px';
-    card.style.backgroundImage = 'url("image/1996artwork100/1996artwork100.jpg")';
-    card.style.backgroundRepeat = 'no-repeat';
-    card.style.backgroundSize = bgWidth + 'px ' + bgHeight + 'px';
-    card.style.backgroundPosition =
-      '-' + (startX + col * stepX) + 'px -' + (startY + row * stepY) + 'px';
-
-    var overlay = document.createElement('div');
-    card.appendChild(overlay);
-
-    imageDiv.appendChild(card);
-  }
-</script>
-        </div>
-        <div class="textDiv">
-            <span>※ 사용법</span>
-            <ul>
-                <li>포켓몬 클릭 : 포켓몬이 선택 됩니다.</li>
-                <li>선택반전 : 선택한 포켓몬이 반전 됩니다.</li>
-                <li>이미지저장 : 현재 선택된 상태로 이미지가 저장됩니다. 
-                    <br><span>* 현재 화면의 배열대로 저장되기 때문에 창크기 조절 후 이미지 저장 하시면 원하는 배열로 저장 됩니다. (PC에서 하는것을 추천)</span>
-                    <br><span>* 삼성 인터넷 브라우저 사용자 및 위 이미지 저장 버튼이 안 먹으면 아래 버튼으로 다운로드 버튼을 직접 생성 하여 저장 가능.</span>
-                </li>
-                <div class="flex">
-                    <input type="button" id="samsungBtn" value="다운로드 버튼생성"/>
-                    <div id="downloadBtn"></div>
-                </div>
-                <li>링크복사 : 현재 선택된 포켓몬이 포함된 URL을 복사합니다 <br><span>* 복사한 URL로 접속시 선택한 포켓몬이 유지됩니다.</span></li>
-            </ul>
-        </div>
-<ins class="kakao_ad_area" style="display:none;"
-data-ad-unit = "DAN-9aSR9NK2SSZf6ru4"
-data-ad-width = "320"
-data-ad-height = "50"></ins>
-<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
-    </body>
-</html>
-<script src="js/html2canvas.min.js"></script>
-<script>
-    var url = 'https://hakmin93.github.io/pokedoc93/?code=';
-    var digits = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_';
-    var binArray = ['000000','000001','000010','000011','000100','000101','000110','000111',
-                      '001000','001001','001010','001011','001100','001101','001110','001111',
-                      '010000','010001','010010','010011','010100','010101','010110','010111',
-                      '011000','011001','011010','011011','011100','011101','011110','011111',
-                      '100000','100001','100010','100011','100100','100101','100110','100111',
-                      '101000','101001','101010','101011','101100','101101','101110','101111',
-                      '110000','110001','110010','110011','110100','110101','110110','110111',
-                      '111000','111001','111010','111011','111100','111101','111110','111111'];
-    var query = window.location.search;
-    var param = new URLSearchParams(query);
-    var code = param.get('code');
-
-    var image = document.querySelectorAll('.image > div');
-    var decoded = decode(code);
-    for (var i = 0 ; i < image.length; i++) {
-        if(decoded && decoded[i] == '1') {
-            image[i].classList.toggle("selected");
-        }
-
-        image[i].addEventListener('click', function(event){
-            event.target.classList.toggle("selected");
-
-            createLink();
-        });
+  <style>
+    .flex {
+      display: flex;
+      align-items: center;
     }
-    createLink();
 
-    var delBtn = document.getElementById('delBtn');
-    delBtn.addEventListener('click', function(event){
-        var image = document.querySelectorAll('.selected');
-        for (var i = 0 ; i < image.length; i++) {
-            image[i].parentElement.style.display = "none"; 
-        }
-    });
+    #downloadBtn {
+      margin: 0 10px;
+    }
 
-    var showBtn = document.getElementById('showBtn');
-    showBtn.addEventListener('click', function(event){
-        var image = document.querySelectorAll('.image');
-        for (var i = 0 ; i < image.length; i++) {
-            image[i].style.display = ""; 
-        }
-    });
+    body {
+      background-color: black;
+      margin: 0;
+      padding-top: 40px;
+    }
 
-    var negativeBtn = document.getElementById('ngtBtn');
-    negativeBtn.addEventListener('click', function(event){
-        var body = document.getElementById('body');
-        if(body.className === "negative"){
-            body.className = ""
-        } else {
-            body.className = "negative"
-        }
-    });
+    body.negative {
+      background-color: white;
+      color: black;
+    }
 
-    var reverseBtn = document.getElementById('reverseBtn');
-    reverseBtn.addEventListener('click', function(event){
-        var image = document.querySelectorAll('.image > div');
+    body.negative .title,
+    body.negative .textDiv,
+    body.negative .menu,
+    body.negative .menu a,
+    body.negative .linkLabel,
+    body.negative .checkCnt {
+      color: black;
+    }
 
-        for (var i = 0 ; i < image.length; i++) {
-            image[i].classList.toggle("selected");
-        }
+    .btnDiv {
+      margin-top: 20px;
+    }
 
-        createLink();
-    });
+    .btnDiv input {
+      margin: 2px;
+      cursor: pointer;
+    }
 
-    var saveBtn = document.getElementById('saveBtn');
-    saveBtn.addEventListener('click', function(event){
-        saveBtn.disable = true;
-        saveBtn.value = '저장중...';
-        html2canvas(document.querySelector("#imageDiv")).then(function(canvas){
-            var myImage = canvas.toDataURL();
-            var link = document.createElement('a');
-            link.download = 'Pokedoc.png';
-            link.href = myImage;
-            document.body.appendChild(link);
-            link.click()
-            document.body.removeChild(link);
-            saveBtn.disable = false;
-            saveBtn.value = '이미지저장';   
-        });
-        
-    });
+    .title {
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: white;
+    }
 
-    var samsungBtn = document.getElementById('samsungBtn');
-    var downloadBtn = document.getElementById('downloadBtn');
-    samsungBtn.addEventListener('click', function(event){
-        samsungBtn.disable = true;
-        samsungBtn.value = '생성중...'
-        html2canvas(document.querySelector("#imageDiv")).then(function(canvas){
-            downloadBtn.innerHTML = ""
-            var myImage = canvas.toDataURL();
-            var link = document.createElement('a');
-            console.log(link)
-            link.download = 'Pokedoc.png';
-            link.href = myImage;
-            link.innerHTML = "다운로드"
-            downloadBtn.appendChild(link);
-            saveBtn.disable = false;
-            samsungBtn.value = '다운로드 버튼생성';   
-        });
-        
-    });
+    .menu {
+      text-align: right;
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: white;
+    }
 
-    var linkBtn = document.getElementById('linkBtn');
-    linkBtn.addEventListener('click', function(event){
-        var content = document.getElementById('linkStr');
-    
-        content.select();
-        document.execCommand('copy');
-        content.setSelectionRange(0, 0);
+    .menu a {
+      text-decoration: none;
+      text-align: right;
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: white;
+    }
 
-        alert("링크가 복사되었습니다!");
-    });
-    
+    .linkStr {
+      width: 100%;
+      max-width: 300px;
+      margin-top: 10px;
+    }
+
+    .linkLabel,
+    .checkCnt {
+      color: white;
+      margin: 10px;
+    }
+
+    .textDiv {
+      color: white;
+      margin: 20px 10px;
+    }
+
+    .textDiv ul {
+      list-style: decimal;
+      padding-left: 20px;
+      margin-top: 5px;
+    }
+
+    .textDiv ul li {
+      margin-bottom: 8px;
+    }
+
+    .textDiv ul li span,
+    .textDiv span.notice {
+      color: crimson;
+    }
+
+    #imageDiv {
+      padding: 10px;
+      font-size: 0;
+    }
+
+    .image {
+      position: relative;
+      display: inline-block;
+      width: 92px;
+      height: 126px;
+      margin: 1px;
+      cursor: pointer;
+      background-repeat: no-repeat;
+      box-sizing: border-box;
+      overflow: hidden;
+      vertical-align: top;
+    }
+
+    .image > div {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      border: 1px solid black;
+      box-sizing: border-box;
+    }
+
+    .selected {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  </style>
+</head>
+
+<body id="body">
+  <header class="PMS_Header_UI">
+    <div class="Header__Users">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <div class="Header__Btns UI">
+      <a class="titleBtn"> 학민's 포켓몬 띠부띠부씰 </a>
+      <a class="navBtn" href="https://hakmin93.github.io/pokedoc93/">메인</a>
+      <a class="navBtn" href="https://hakmin93.github.io/pokedoc93/1996artwork100/">1996 아트웍 100종</a>
+      <a class="navBtn" href="https://hakmin93.github.io/pokedoc93/2026new150/">2026 NEW 150종</a>
+      <a class="navBtn" href="https://moadocs.github.io"><i class="fa-solid fa-book"></i> 다른 도감 보러가기</a>
+    </div>
+
+    <div class="js-clock">
+      <h1></h1>
+    </div>
+  </header>
+
+  <div class="title">학민's 포켓몬 띠부띠부씰 도감 ver 1.1 - 1996 아트웍 100종</div>
+
+  <div class="checkCnt">
+    선택: (<span id="cnt">0</span>/100)
+    <input type="button" id="delBtn" value="선택한 씰 숨기기">
+    <input type="button" id="showBtn" value="숨긴 씰 보기">
+    <input type="button" id="ngtBtn" value="배경색 반전">
+    <input type="button" id="reverseBtn" value="선택반전">
+    <input type="button" id="saveBtn" value="이미지저장">
+  </div>
+
+  <div id="imageDiv"></div>
+
+  <div class="textDiv">
+    <span>※ 사용법</span>
+    <ul>
+      <li>포켓몬 클릭 : 포켓몬이 선택됩니다.</li>
+      <li>선택반전 : 선택한 포켓몬이 반전됩니다.</li>
+      <li>
+        이미지저장 : 현재 선택된 상태로 이미지가 저장됩니다.
+        <br><span>* 현재 화면의 배열대로 저장되기 때문에 창크기 조절 후 이미지저장 하시면 원하는 배열로 저장됩니다. PC에서 하는 것을 추천합니다.</span>
+        <br><span>* 삼성 인터넷 브라우저 사용자 및 이미지저장 버튼이 안 먹으면 아래 버튼으로 다운로드 버튼을 직접 생성하여 저장 가능합니다.</span>
+      </li>
+      <li>
+        <div class="flex">
+          <input type="button" id="samsungBtn" value="다운로드 버튼생성">
+          <div id="downloadBtn"></div>
+        </div>
+      </li>
+      <li>
+        링크복사 : 현재 선택된 포켓몬이 포함된 URL을 복사합니다.
+        <br><span>* 복사한 URL로 접속 시 선택한 포켓몬이 유지됩니다.</span>
+      </li>
+    </ul>
+
+    <div class="linkLabel">
+      링크:
+      <input type="text" id="linkStr" class="linkStr" readonly>
+      <input type="button" id="linkBtn" value="링크복사">
+    </div>
+  </div>
+
+  <script src="js/html2canvas.min.js"></script>
+
+  <script>
+    /*
+      1996 아트웍 100종 생성 코드
+      큰 이미지 1장: image/1996artwork100/1996artwork100.jpg
+      10 x 10 = 100칸
+    */
+    var imageDiv = document.getElementById('imageDiv');
+
+    var totalCount = 100;
+    var cols = 10;
+
+    var cardWidth = 92;
+    var cardHeight = 126;
+
+    var startX = 52;
+    var startY = 84;
+
+    var stepX = 102;
+    var stepY = 136;
+
+    var bgWidth = 1125;
+    var bgHeight = 1481;
+
+    for (var i = 0; i < totalCount; i++) {
+      var col = i % cols;
+      var row = Math.floor(i / cols);
+
+      var card = document.createElement('div');
+      card.className = 'image';
+
+      card.style.width = cardWidth + 'px';
+      card.style.height = cardHeight + 'px';
+      card.style.backgroundImage = 'url("image/1996artwork100/1996artwork100.jpg")';
+      card.style.backgroundRepeat = 'no-repeat';
+      card.style.backgroundSize = bgWidth + 'px ' + bgHeight + 'px';
+      card.style.backgroundPosition =
+        '-' + (startX + col * stepX) + 'px -' + (startY + row * stepY) + 'px';
+
+      var overlay = document.createElement('div');
+      card.appendChild(overlay);
+
+      imageDiv.appendChild(card);
+    }
+  </script>
+
+  <script>
+    /*
+      선택, 선택반전, 숨기기, 숨긴 씰 보기, 배경반전, 이미지저장, 링크복사
+    */
+
+    var url = 'https://hakmin93.github.io/pokedoc93/?code=';
+
+    var digits = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_';
+
+    var binArray = [
+      '000000','000001','000010','000011','000100','000101','000110','000111',
+      '001000','001001','001010','001011','001100','001101','001110','001111',
+      '010000','010001','010010','010011','010100','010101','010110','010111',
+      '011000','011001','011010','011011','011100','011101','011110','011111',
+      '100000','100001','100010','100011','100100','100101','100110','100111',
+      '101000','101001','101010','101011','101100','101101','101110','101111',
+      '110000','110001','110010','110011','110100','110101','110110','110111',
+      '111000','111001','111010','111011','111100','111101','111110','111111'
+    ];
+
+    function getImages() {
+      return document.querySelectorAll('.image > div');
+    }
+
+    function getSelectedImages() {
+      return document.querySelectorAll('.image > div.selected');
+    }
+
     function createLink() {
-        var image = document.querySelectorAll('.image > div');
-        var codeStr = '';
-        var cnt = 0;
+      var image = getImages();
+      var codeStr = '';
+      var cnt = 0;
 
-        for (var i = 0 ; i < image.length; i++) {
-            codeStr += (image[i].classList.contains('selected')?'1':'0');
-            
-            if(image[i].classList.contains('selected')) {
-                cnt++;
-            }
+      for (var i = 0; i < image.length; i++) {
+        if (image[i].classList.contains('selected')) {
+          codeStr += '1';
+          cnt++;
+        } else {
+          codeStr += '0';
         }
-        var linkStr = document.getElementById('linkStr');
-        linkStr.value = url + encode(codeStr + '0');
+      }
 
-        var cntStr = document.getElementById('cnt');
+      var linkStr = document.getElementById('linkStr');
+      if (linkStr) {
+        linkStr.value = url + encode(codeStr + '0');
+      }
+
+      var cntStr = document.getElementById('cnt');
+      if (cntStr) {
         cntStr.innerHTML = cnt;
+      }
     }
 
     function decode(code) {
-        if(code) {
-            var decodedCode = '';
-            for(var i = 0; i < code.length; i++) {
-                decodedCode += binArray[digits.indexOf(code[i])];
-            }
-            return decodedCode;
+      if (code) {
+        var decodedCode = '';
+
+        for (var i = 0; i < code.length; i++) {
+          var index = digits.indexOf(code[i]);
+
+          if (index >= 0) {
+            decodedCode += binArray[index];
+          }
         }
-        return code;
+
+        return decodedCode;
+      }
+
+      return code;
     }
 
     function encode(code) {
-        var encodedCode = '';
-        for(var i = 0; i < (parseInt(code.length/6)); i++) {
-            encodedCode += digits.charAt(parseInt(code.substr(i*6,6),2));
-        }
-        return encodedCode;
+      var encodedCode = '';
+
+      for (var i = 0; i < parseInt(code.length / 6); i++) {
+        encodedCode += digits.charAt(parseInt(code.substr(i * 6, 6), 2));
+      }
+
+      return encodedCode;
     }
-</script>
+
+    function loadSelectedFromUrl() {
+      var query = window.location.search;
+      var param = new URLSearchParams(query);
+      var code = param.get('code');
+
+      var image = getImages();
+      var decoded = decode(code);
+
+      for (var i = 0; i < image.length; i++) {
+        if (decoded && decoded[i] === '1') {
+          image[i].classList.add('selected');
+        }
+      }
+
+      createLink();
+    }
+
+    function bindImageClick() {
+      var image = getImages();
+
+      for (var i = 0; i < image.length; i++) {
+        image[i].addEventListener('click', function(event) {
+          event.target.classList.toggle('selected');
+          createLink();
+        });
+      }
+    }
+
+    function bindButtons() {
+      var delBtn = document.getElementById('delBtn');
+      if (delBtn) {
+        delBtn.addEventListener('click', function() {
+          var selected = getSelectedImages();
+
+          for (var i = 0; i < selected.length; i++) {
+            selected[i].parentElement.style.display = 'none';
+          }
+        });
+      }
+
+      var showBtn = document.getElementById('showBtn');
+      if (showBtn) {
+        showBtn.addEventListener('click', function() {
+          var image = document.querySelectorAll('.image');
+
+          for (var i = 0; i < image.length; i++) {
+            image[i].style.display = '';
+          }
+        });
+      }
+
+      var negativeBtn = document.getElementById('ngtBtn');
+      if (negativeBtn) {
+        negativeBtn.addEventListener('click', function() {
+          var body = document.getElementById('body');
+
+          if (body.className === 'negative') {
+            body.className = '';
+          } else {
+            body.className = 'negative';
+          }
+        });
+      }
+
+      var reverseBtn = document.getElementById('reverseBtn');
+      if (reverseBtn) {
+        reverseBtn.addEventListener('click', function() {
+          var image = getImages();
+
+          for (var i = 0; i < image.length; i++) {
+            image[i].classList.toggle('selected');
+          }
+
+          createLink();
+        });
+      }
+
+      var saveBtn = document.getElementById('saveBtn');
+      if (saveBtn) {
+        saveBtn.addEventListener('click', function() {
+          saveBtn.disabled = true;
+          saveBtn.value = '저장중...';
+
+          html2canvas(document.querySelector('#imageDiv'), {
+            useCORS: true,
+            allowTaint: true,
+            backgroundColor: null
+          }).then(function(canvas) {
+            var myImage = canvas.toDataURL();
+            var link = document.createElement('a');
+
+            link.download = 'Pokedoc.png';
+            link.href = myImage;
+
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+
+            saveBtn.disabled = false;
+            saveBtn.value = '이미지저장';
+          });
+        });
+      }
+
+      var samsungBtn = document.getElementById('samsungBtn');
+      var downloadBtn = document.getElementById('downloadBtn');
+
+      if (samsungBtn && downloadBtn) {
+        samsungBtn.addEventListener('click', function() {
+          samsungBtn.disabled = true;
+          samsungBtn.value = '생성중...';
+
+          html2canvas(document.querySelector('#imageDiv'), {
+            useCORS: true,
+            allowTaint: true,
+            backgroundColor: null
+          }).then(function(canvas) {
+            downloadBtn.innerHTML = '';
+
+            var myImage = canvas.toDataURL();
+            var link = document.createElement('a');
+
+            link.download = 'Pokedoc.png';
+            link.href = myImage;
+            link.innerHTML = '다운로드';
+
+            downloadBtn.appendChild(link);
+
+            samsungBtn.disabled = false;
+            samsungBtn.value = '다운로드 버튼생성';
+          });
+        });
+      }
+
+      var linkBtn = document.getElementById('linkBtn');
+      if (linkBtn) {
+        linkBtn.addEventListener('click', function() {
+          var content = document.getElementById('linkStr');
+
+          if (!content) return;
+
+          content.select();
+          document.execCommand('copy');
+          content.setSelectionRange(0, 0);
+
+          alert('링크가 복사되었습니다!');
+        });
+      }
+    }
+
+    loadSelectedFromUrl();
+    bindImageClick();
+    bindButtons();
+    createLink();
+  </script>
+</body>
+</html>
