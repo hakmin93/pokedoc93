@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>1996 아트웍 100종</title>
   <link rel="stylesheet" href="../header.css">
+
   <style>
     body {
       background: black;
@@ -12,46 +13,154 @@
       padding-top: 40px;
     }
 
-    .gallery-title {
+    .title {
       text-align: center;
-      font-size: 24px;
-      margin: 20px;
+      font-size: 22px;
+      margin: 20px 0;
+      color: white;
     }
 
-    .gallery {
+    .checkCnt {
+      color: white;
+      margin: 10px;
+    }
+
+    #imageDiv {
       padding: 10px;
     }
 
-    .myphoto {
+    .image {
+      position: relative;
       display: inline-block;
-      width: 180px;
-      height: auto;
-      margin: 5px;
-      border: 1px solid white;
+      width: 84px;
+      height: 111px;
+      margin: 1px;
+      cursor: pointer;
+      background-repeat: no-repeat;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    .image > div {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      border: 1px solid black;
+      box-sizing: border-box;
+    }
+
+    .selected {
+      background-color: rgba(0,0,0,0.7);
+    }
+
+    .btnDiv {
+      margin: 20px 10px;
     }
   </style>
 </head>
-<body>
 
+<body id="body">
   <header class="PMS_Header_UI">
-    <div class="Header__Users">
-      ☰
-    </div>
+    <div class="Header__Users">☰</div>
     <div class="Header__Btns UI">
-      <a class="titleBtn"> 학민's 포켓몬 도감 </a>
+      <a class="titleBtn">학민's 포켓몬 도감</a>
       <a class="navBtn" href="../index.html">메인</a>
+      <a class="navBtn" href="../order_release_fix/">출시순</a>
       <a class="navBtn" href="../1996artwork100/">1996 아트웍 100종</a>
-      <a class="navBtn" href="../2026new150/">2026 신규 150종</a>
     </div>
   </header>
 
-  <h1 class="gallery-title">1996 아트웍 100종</h1>
+  <div class="title">1996 아트웍 100종</div>
 
-  <div class="gallery">
-    <img class="myphoto" src="../image/1996artwork100/001.jpg">
-    <img class="myphoto" src="../image/1996artwork100/002.jpg">
-    <img class="myphoto" src="../image/1996artwork100/003.jpg">
+  <div class="checkCnt">
+    선택: <span id="cnt">0</span>/100
   </div>
 
+  <div id="imageDiv"></div>
+
+  <div class="btnDiv">
+    <input type="button" id="reverseBtn" value="선택반전">
+    <input type="button" id="showBtn" value="숨긴 씰 보기">
+  </div>
+
+  <script>
+    function createSpriteCards() {
+      const container = document.getElementById("imageDiv");
+
+      const imageUrl = "../image/1996artwork100/1996artwork100.jpg";
+
+      const count = 100;
+      const cols = 10;
+
+      /*
+        여기 숫자가 제일 중요함.
+        지금은 테스트용 기본값.
+        이미지가 어긋나면 아래 숫자만 조정하면 됨.
+      */
+      const cardWidth = 84;
+      const cardHeight = 111;
+
+      const startX = 0;
+      const startY = 0;
+
+      const stepX = 84;
+      const stepY = 111;
+
+      const backgroundWidth = 840;
+      const backgroundHeight = 1110;
+
+      for (let i = 0; i < count; i++) {
+        const col = i % cols;
+        const row = Math.floor(i / cols);
+
+        const card = document.createElement("div");
+        card.className = "image";
+
+        card.style.width = cardWidth + "px";
+        card.style.height = cardHeight + "px";
+        card.style.backgroundImage = `url("${imageUrl}")`;
+        card.style.backgroundSize = backgroundWidth + "px " + backgroundHeight + "px";
+        card.style.backgroundPosition =
+          `-${startX + col * stepX}px -${startY + row * stepY}px`;
+
+        const overlay = document.createElement("div");
+        card.appendChild(overlay);
+
+        container.appendChild(card);
+      }
+    }
+
+    function setupSelect() {
+      const overlays = document.querySelectorAll(".image > div");
+      const cnt = document.getElementById("cnt");
+
+      function updateCount() {
+        cnt.innerText = document.querySelectorAll(".image > div.selected").length;
+      }
+
+      overlays.forEach(function(overlay) {
+        overlay.addEventListener("click", function() {
+          overlay.classList.toggle("selected");
+          updateCount();
+        });
+      });
+
+      document.getElementById("reverseBtn").addEventListener("click", function() {
+        overlays.forEach(function(overlay) {
+          overlay.classList.toggle("selected");
+        });
+        updateCount();
+      });
+
+      document.getElementById("showBtn").addEventListener("click", function() {
+        document.querySelectorAll(".image").forEach(function(card) {
+          card.style.display = "";
+        });
+      });
+    }
+
+    createSpriteCards();
+    setupSelect();
+  </script>
 </body>
 </html>
