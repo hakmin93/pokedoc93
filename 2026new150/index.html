@@ -173,7 +173,7 @@
   <div class="title">2026 NEW 150종</div>
 
   <div class="checkCnt">
-    선택: (<span id="cnt">0</span>/100)
+    선택: (<span id="cnt">0</span>/150)
     <input type="button" id="delBtn" value="선택한 씰 숨기기">
     <input type="button" id="showBtn" value="숨긴 씰 보기">
     <input type="button" id="ngtBtn" value="배경색 반전">
@@ -215,59 +215,63 @@
   <script src="../js/html2canvas.min.js"></script>
 
   <script>
+ <script>
   /*
-    2026 아트웍 150종 생성 코드
-    고화질 원본 1장 사용
-    2026new150.png = 1~150번
+    2026 NEW 150종 생성 코드
+    큰 이미지 1장 사용
+    2026new150.png = 10칸 x 15줄 = 150개
   */
 
   var imageDiv = document.getElementById('imageDiv');
 
+  // 하얀색 카드면만 보이게 자르는 크기
   var cardWidth = 78;
   var cardHeight = 108;
 
-  var sheets = [
-    {
-      file: '../image/2026new150/2026new150.png',
-      count: 25,
-      cols: 5,
-      rows: 5,
-      startX: 10,
-      startY: 10,
-      stepX: 91,
-      stepY: 124,
-      bgWidth: 455,
-      bgHeight: 620
-    },
-   
-  ];
+  var sheet = {
+    file: '../image/2026new150/2026new150.png',
 
-  for (var s = 0; s < sheets.length; s++) {
-    var sheet = sheets[s];
+    // 10 x 15 = 150
+    count: 150,
+    cols: 10,
+    rows: 15,
 
-    for (var i = 0; i < sheet.count; i++) {
-      var col = i % sheet.cols;
-      var row = Math.floor(i / sheet.cols);
+    /*
+      여기 숫자는 2026new150.png 실제 이미지에 맞춰 조정하는 부분.
+      처음에는 아래 값으로 시작하고, 초록색 여백이나 밀림이 있으면 조정.
+    */
+    startX: 10,
+    startY: 10,
 
-      var card = document.createElement('div');
-      card.className = 'image';
+    stepX: 91,
+    stepY: 124,
 
-      card.style.width = cardWidth + 'px';
-      card.style.height = cardHeight + 'px';
-      card.style.backgroundImage = 'url("' + sheet.file + '")';
-      card.style.backgroundRepeat = 'no-repeat';
-      card.style.backgroundSize = sheet.bgWidth + 'px ' + sheet.bgHeight + 'px';
+    bgWidth: 910,
+    bgHeight: 1860
+  };
 
-      var x = sheet.startX + col * sheet.stepX;
-      var y = sheet.startY + row * sheet.stepY;
+  for (var i = 0; i < sheet.count; i++) {
+    var col = i % sheet.cols;
+    var row = Math.floor(i / sheet.cols);
 
-      card.style.backgroundPosition = '-' + x + 'px -' + y + 'px';
+    var card = document.createElement('div');
+    card.className = 'image';
 
-      var overlay = document.createElement('div');
-      card.appendChild(overlay);
+    card.style.width = cardWidth + 'px';
+    card.style.height = cardHeight + 'px';
+    card.style.backgroundImage = 'url("' + sheet.file + '")';
+    card.style.backgroundRepeat = 'no-repeat';
+    card.style.backgroundSize = sheet.bgWidth + 'px ' + sheet.bgHeight + 'px';
 
-      imageDiv.appendChild(card);
-    }
+    var x = sheet.startX + col * sheet.stepX;
+    var y = sheet.startY + row * sheet.stepY;
+
+    card.style.backgroundPosition = '-' + x + 'px -' + y + 'px';
+
+    var overlay = document.createElement('div');
+    card.appendChild(overlay);
+
+    imageDiv.appendChild(card);
   }
 </script>
 
@@ -276,7 +280,7 @@
       선택, 선택반전, 숨기기, 숨긴 씰 보기, 배경반전, 이미지저장, 링크복사
     */
 
-    var url = 'https://hakmin93.github.io/pokedoc93/1996artwork100/?code=';
+    var url = 'https://hakmin93.github.io/pokedoc93/2026new150/?code=';
 
     var digits = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_';
 
