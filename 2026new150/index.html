@@ -214,38 +214,80 @@
 
   <script src="../js/html2canvas.min.js"></script>
 
-  <script>
+ <script>
   /*
     2026 NEW 150종 생성 코드
-    큰 이미지 1장 사용
     12칸 x 13줄 구조에서 150개 카드 생성
+
+    12 x 13 = 156칸 구조지만,
+    count를 150으로 둬서 앞에서부터 150개만 생성함.
   */
 
   var imageDiv = document.getElementById('imageDiv');
 
-  // 하얀색 카드면만 보이게 자르는 크기
- var cardWidth = 67;
-var cardHeight = 96;
+  /*
+    하얀색 카드면만 보이게 자르는 크기.
+    초록색 여백이 보이면 이 값을 조금 줄이면 됨.
+  */
+  var cardWidth = 64;
+  var cardHeight = 92;
 
-var sheet = {
-  file: '../image/2026new150/2026new150.png',
+  var sheet = {
+    file: '../image/2026new150/2026new150.png',
 
-  count: 150,
-  cols: 12,
-  rows: 13,
+    count: 150,
+    cols: 12,
+    rows: 13,
 
-  // 첫 번째 하얀 카드칸이 시작하는 위치
-  startX: 50,
-  startY: 160,
-
-  // 카드와 카드 사이 간격
-  stepX: 85,
-  stepY: 108,
-
-  // 원본 이미지를 화면에서 강제로 맞출 크기
-  bgWidth: 940,
-  bgHeight: 1500
+    /*
+      배경 이미지 강제 크기.
+      기존 940 x 1500은 12칸 구조에 조금 작아서
+      아래/오른쪽으로 갈수록 잘림이 틀어질 수 있음.
+    */
+    bgWidth: 1080,
+    bgHeight: 1600
   };
+
+  /*
+    가로 위치 12칸.
+    시작점 50 기준, 칸 간격 85 기준.
+    가로가 틀어지면 이 배열 숫자만 직접 조정.
+  */
+  var xPositions = [
+    50,   // 1번째 칸
+    135,  // 2번째 칸
+    220,  // 3번째 칸
+    305,  // 4번째 칸
+    390,  // 5번째 칸
+    475,  // 6번째 칸
+    560,  // 7번째 칸
+    645,  // 8번째 칸
+    730,  // 9번째 칸
+    815,  // 10번째 칸
+    900,  // 11번째 칸
+    985   // 12번째 칸
+  ];
+
+  /*
+    세로 위치 13줄.
+    기존 stepY: 108 방식 대신 줄마다 직접 지정.
+    아래로 갈수록 많이 밀리면 이 배열에서 해당 줄 숫자만 조정하면 됨.
+  */
+  var yPositions = [
+    160,  // 1번째 줄
+    264,  // 2번째 줄
+    368,  // 3번째 줄
+    472,  // 4번째 줄
+    576,  // 5번째 줄
+    680,  // 6번째 줄
+    784,  // 7번째 줄
+    888,  // 8번째 줄
+    992,  // 9번째 줄
+    1096, // 10번째 줄
+    1200, // 11번째 줄
+    1304, // 12번째 줄
+    1408  // 13번째 줄
+  ];
 
   for (var i = 0; i < sheet.count; i++) {
     var col = i % sheet.cols;
@@ -260,8 +302,8 @@ var sheet = {
     card.style.backgroundRepeat = 'no-repeat';
     card.style.backgroundSize = sheet.bgWidth + 'px ' + sheet.bgHeight + 'px';
 
-    var x = sheet.startX + col * sheet.stepX;
-    var y = sheet.startY + row * sheet.stepY;
+    var x = xPositions[col];
+    var y = yPositions[row];
 
     card.style.backgroundPosition = '-' + x + 'px -' + y + 'px';
 
