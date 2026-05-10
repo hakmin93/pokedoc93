@@ -214,56 +214,100 @@
 
   <script src="js/html2canvas.min.js"></script>
 
-  <script>
-    /*
-      1996 아트웍 100종 생성 코드
-      큰 이미지 1장: image/1996artwork100/1996artwork100.jpg
-      10 x 10 = 100칸
-    */
-    var imageDiv = document.getElementById('imageDiv');
+ <script>
+  /*
+    1996 아트웍 100종 생성 코드
+    고화질 원본 4장 사용
+    artwork100_1.jpg = 1~25번
+    artwork100_2.jpg = 26~50번
+    artwork100_3.jpg = 51~75번
+    artwork100_4.jpg = 76~100번
+  */
 
-    var totalCount = 100;
-    var cols = 10;
+  var imageDiv = document.getElementById('imageDiv');
 
-    var cardWidth = 91;
-    var cardHeight = 124;
+  var cardWidth = 91;
+  var cardHeight = 124;
 
-    var startX = 51;
-    var startY = 84;
+  var sheets = [
+    {
+      file: 'image/1996artwork100/artwork100_1.jpg',
+      count: 25,
+      cols: 5,
+      rows: 5,
+      startX: 0,
+      startY: 0,
+      stepX: 91,
+      stepY: 124,
+      bgWidth: 455,
+      bgHeight: 620
+    },
+    {
+      file: 'image/1996artwork100/artwork100_2.jpg',
+      count: 25,
+      cols: 5,
+      rows: 5,
+      startX: 0,
+      startY: 0,
+      stepX: 91,
+      stepY: 124,
+      bgWidth: 455,
+      bgHeight: 620
+    },
+    {
+      file: 'image/1996artwork100/artwork100_3.jpg',
+      count: 25,
+      cols: 5,
+      rows: 5,
+      startX: 0,
+      startY: 0,
+      stepX: 91,
+      stepY: 124,
+      bgWidth: 455,
+      bgHeight: 620
+    },
+    {
+      file: 'image/1996artwork100/artwork100_4.jpg',
+      count: 25,
+      cols: 5,
+      rows: 5,
+      startX: 0,
+      startY: 0,
+      stepX: 91,
+      stepY: 124,
+      bgWidth: 455,
+      bgHeight: 620
+    }
+  ];
 
-    var stepX = 101.5;
-    var stepY = 134.7;
+  for (var s = 0; s < sheets.length; s++) {
+    var sheet = sheets[s];
 
-    var bgWidth = 1125;
-    var bgHeight = 1481;
-
-    for (var i = 0; i < totalCount; i++) {
-      var col = i % cols;
-      var row = Math.floor(i / cols);
+    for (var i = 0; i < sheet.count; i++) {
+      var col = i % sheet.cols;
+      var row = Math.floor(i / sheet.cols);
 
       var card = document.createElement('div');
       card.className = 'image';
 
       card.style.width = cardWidth + 'px';
       card.style.height = cardHeight + 'px';
-      card.style.backgroundImage = 'url("image/1996artwork100/1996artwork100.jpg")';
+      card.style.backgroundImage = 'url("' + sheet.file + '")';
       card.style.backgroundRepeat = 'no-repeat';
-      card.style.backgroundSize = bgWidth + 'px ' + bgHeight + 'px';
-     var xCorrectionByRow = row * 0.2;
-     var yCorrectionByCol = col * 0.05;
+      card.style.backgroundSize = sheet.bgWidth + 'px ' + sheet.bgHeight + 'px';
 
-     var x = startX + col * stepX + xCorrectionByRow;
-     var y = startY + row * stepY + yCorrectionByCol;
+      var x = sheet.startX + col * sheet.stepX;
+      var y = sheet.startY + row * sheet.stepY;
 
-     card.style.backgroundPosition =
-     '-' + x + 'px -' + y + 'px';
+      card.style.backgroundPosition = '-' + x + 'px -' + y + 'px';
 
       var overlay = document.createElement('div');
       card.appendChild(overlay);
 
       imageDiv.appendChild(card);
     }
-  </script>
+  }
+</script>
 
   <script>
     /*
