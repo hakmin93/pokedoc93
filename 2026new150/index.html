@@ -126,8 +126,8 @@
   .image {
   position: relative;
   display: inline-block;
-  width: 75px;
-  height: 113px;
+  width: 65px;
+  height: 94px;
   margin: 1px;
   cursor: pointer;
   background-repeat: no-repeat;
@@ -214,69 +214,75 @@
 
   <script src="../js/html2canvas.min.js"></script>
 
- <script>
+<script>
   /*
-    1996 아트웍 100종 생성 코드
-    원본 이미지:
-    - 12열 x 9행
-    - 마지막 9행은 4장만 있음
-    - 총 100장
+    2026 NEW 150종 생성 코드
+    12칸 x 13줄 구조에서 150개 카드 생성
+    시작점은 기존에 맞았던 50, 160 기준으로 유지
   */
 
   var imageDiv = document.getElementById('imageDiv');
 
-  var cardWidth = 75;
-  var cardHeight = 113;
+  /*
+    하얀색 카드면만 보이게 자르는 크기
+    초록색 테두리가 많이 보이면 cardWidth/cardHeight를 조금 줄이면 됨
+  */
+  var cardWidth = 65;
+  var cardHeight = 94;
 
   var sheet = {
-    file: 'image/1996artwork100/1996artwork100fix.png',
+    file: '../image/2026new150/2026new150.png',
 
-    count: 100,
+    count: 150,
     cols: 12,
-    rows: 9,
+    rows: 13,
 
-        /*
+    /*
       기존에 시작점이 맞았던 기준으로 복구
       여기 바꾸면 전체 위치가 다시 틀어짐
     */
-    bgWidth: 950,
-    bgHeight: 1510
+    bgWidth: 940,
+    bgHeight: 1500
   };
 
   /*
     가로 위치 12칸
-    기존 startX: 16, stepX: 77 기준
+    기존 startX: 50, stepX: 85 기준
   */
   var xPositions = [
-    16,
-    93,
-    170,
-    247,
-    324,
-    401,
-    478,
-    555,
-    632,
-    709,
-    786,
-    863
+    50,
+    120,
+    190,
+    260,
+    330,
+    400,
+    470.5,
+    541,
+    610,
+    680,
+    750,
+    820
   ];
 
   /*
     세로 위치 13줄
-    기존 startY: 199, stepY: 119 기준에서
+    기존 startY: 160, stepY: 108 기준에서
     아래로 갈수록 살짝 덜 내려가게 조정한 값
   */
   var yPositions = [
-    199,  // 1번째 줄
-    318,  // 2번째 줄
-    437,  // 3번째 줄
-    556,  // 4번째 줄
-    675,  // 5번째 줄
-    794,  // 6번째 줄
-    913,  // 7번째 줄
-    1032,  // 8번째 줄
-    1151, // 9번째 줄
+    160,  // 1번째 줄
+    258.5,  // 2번째 줄
+    358,  // 3번째 줄
+    459,  // 4번째 줄
+    559,  // 5번째 줄
+    660,  // 6번째 줄
+    761,  // 7번째 줄
+    860.5,  // 8번째 줄
+    960, // 9번째 줄
+    1060, // 10번째 줄
+    1159, // 11번째 줄
+    1260.5, // 12번째 줄
+    1360.5  // 13번째 줄
   ];
 
   for (var i = 0; i < sheet.count; i++) {
