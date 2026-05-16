@@ -331,30 +331,37 @@
       return document.querySelectorAll('.image > div.selected');
     }
 
-    function createLink() {
-      var image = getImages();
-      var codeStr = '';
-      var cnt = 0;
+   function createLink() {
+  var image = getImages();
+  var codeStr = '';
+  var cnt = 0;
 
-      for (var i = 0; i < image.length; i++) {
-        if (image[i].classList.contains('selected')) {
-          codeStr += '1';
-          cnt++;
-        } else {
-          codeStr += '0';
-        }
-      }
-
-      var linkStr = document.getElementById('linkStr');
-      if (linkStr) {
-        linkStr.value = url + encode(codeStr + '0');
-      }
-
-      var cntStr = document.getElementById('cnt');
-      if (cntStr) {
-        cntStr.innerHTML = cnt;
-      }
+  for (var i = 0; i < image.length; i++) {
+    if (image[i].classList.contains('selected')) {
+      codeStr += '1';
+      cnt++;
+    } else {
+      codeStr += '0';
     }
+  }
+
+  // 추가
+  while (codeStr.length % 6 !== 0) {
+    codeStr += '0';
+  }
+
+  var linkStr = document.getElementById('linkStr');
+
+  if (linkStr) {
+    linkStr.value = url + encode(codeStr);
+  }
+
+  var cntStr = document.getElementById('cnt');
+
+  if (cntStr) {
+    cntStr.innerHTML = cnt;
+  }
+}
 
     function decode(code) {
       if (code) {
